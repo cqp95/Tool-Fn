@@ -12,12 +12,6 @@ git clone https://github.com/unjust-life/Tool-Fn.git
 #安装依赖
 npm install
 
-#代码检查 对src目录下所有文件执行styleLint检测
-npm run lint
-
-#代码检查 对src目录下所有文件执行styleLint检测并尝试自动修复
-npm run fix
-
 ```
 
 
@@ -61,5 +55,15 @@ type: 本次改动类型
 scope 改动范围 不允许为空 使用英文小写字母
 
 subject 改动内容 结尾禁止加标点符号
+
+
+为了仓库的代码质量和风格的统一，git commit的钩子中将会执行代码检查，不符合要求的将被拒绝。
+为了提升开发体验，新增了两个命令。
+
+#对src目录下所有文件执行styleLint检测 提示目前存在的错误
+npm run lint
+
+#对src目录下的文件存在的错误尝试进行自动修复
+npm run fix
 
 ```
