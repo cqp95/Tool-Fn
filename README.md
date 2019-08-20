@@ -20,21 +20,46 @@ npm run fix
 
 ```
 
+
+
+## 文件目录
+``` bash
+
+src 开发目录
+  -modules  模块 新增函数请在这在这个目录新建文件夹
+    --fn    函数模块文件夹
+  -index.js 入口
+pages 页面目录
+  -doc 文档页面
+
+```
+
+
+
+``` bash
+```
+
 提交规范
 ---
->请确认通过lint检查
->commit 提交信息格式 git commit -m 'type(scope): subject'
+>提交代码前请确认代码通过lint检查 没有任何error
 
-### type本次改动类型
--feature()  提交新的代码
--fix()      修复bug
--doc()      文档修改
--chore()    辅助工具或配置的变更
--refactor() 重构
--test()     测试代码
+>单次提交一个模块文件/函数
 
-### scope 改动范围 不允许为空
+>尽可能的避免兼容性问题 如使用了有兼容性问题的语法请注明
 
-### subject 改动内容 结尾禁止加标点符号
+``` bash
+commit 提交信息格式 'type(scope): subject'
 
+type: 本次改动类型
+-feat()      提交新的代码
+-fix()       修复bug
+-docs()      文档修改
+-chore()     辅助工具或配置的变更
+-refactor()  重构
+-test()      测试代码
 
+scope 改动范围 不允许为空 使用英文小写字母
+
+subject 改动内容 结尾禁止加标点符号
+
+```
